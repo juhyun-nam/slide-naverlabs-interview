@@ -5,12 +5,34 @@
   "scripts": {
     "build": "slidev build",
     "dev": "slidev --open",
-    "export": "slidev export"
+    "export": "slidev export",
+    "format": "prettier --write slides.md pages/*.md"
   },
   "dependencies": {
     "@slidev/cli": "^52.11.1",
+    "@slidev/theme-apple-basic": "^0.25.1",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
     "vue": "^3.5.26"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "prettier-plugin-slidev": "^1.0.5"
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": [
+          "slides.md",
+          "pages/*.md"
+        ],
+        "options": {
+          "parser": "slidev",
+          "plugins": [
+            "prettier-plugin-slidev"
+          ]
+        }
+      }
+    ]
   }
 }
