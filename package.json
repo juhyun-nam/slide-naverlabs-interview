@@ -6,7 +6,7 @@
     "build": "slidev build",
     "dev": "slidev --open",
     "export": "slidev export",
-    "format": "prettier --write slides.md pages/*.md"
+    "format": "prettier --write slides.md style.css pages/*.md"
   },
   "dependencies": {
     "@slidev/cli": "^52.11.1",
